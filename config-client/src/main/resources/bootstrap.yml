@@ -14,3 +14,11 @@ spring:
       uri: http://localhost:7001/        # 配置中心服务端地址
       profile: dev                       # 指定的环境
       label: master                      # 指定分支
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

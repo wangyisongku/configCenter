@@ -13,3 +13,12 @@ spring:
           label: master                                       # git仓库分支
           username: wangyisongku                              # git仓库的账号
           password: wys740267827                              # git仓库的密码
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  security:
+    enabled: false         # 刷新时，关闭安全验证
