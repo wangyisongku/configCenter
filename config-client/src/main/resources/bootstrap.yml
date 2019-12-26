@@ -1,14 +1,16 @@
 server:
   port: 7002
+
 management:
   security:
     enabled: false     # SpringBoot 1.5.X 以上默认开通了安全认证，如果不关闭会要求权限
 
 spring:
   application:
-    name: wys-config                     # 指定了配置文件的应用名
+    name: config-client
   cloud:
     config:
-      uri: http://localhost:7001/        # Config server的uri
+      name: wys-config                   # 获取配置文件的名称
+      uri: http://localhost:7001/        # 配置中心服务端地址
       profile: dev                       # 指定的环境
-      label: master                      #  指定分支
+      label: master                      # 指定分支
